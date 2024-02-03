@@ -20,7 +20,7 @@ const ResetConfirmation = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Reset Your Password</Text>
+      <Text style={styles.title}>Code has been sent!</Text>
       <Text style={styles.text}>
         
       </Text>
@@ -57,7 +57,7 @@ const ResetConfirmation = () => {
         control={control}
         secureTextEntry
         rules={{
-          validate: (value) => value === pass || "Password do not match",
+          validate: (value) => value === pass || "Passwords do not match",
         }}
       />
       <Button
@@ -83,10 +83,13 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: "300",
     color: "black",
+    fontWeight:"bold",
   },
   text: {
     marginVertical: 10,
     color: "white",
+    paddingBottom:20,
+ 
   },
 });
 

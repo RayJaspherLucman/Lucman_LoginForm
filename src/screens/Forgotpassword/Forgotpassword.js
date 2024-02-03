@@ -18,14 +18,14 @@ const Forgotpassword = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Enter Valid Email to Reset</Text>
+      <View><Text style={styles.title}>Enter Valid Email to Reset</Text></View>
       <Input
         name="Enter Email"
         placeholder="Enter Email"
         control={control}
         rules={{
-          required: "Email is required",
-          pattern: { value: EMAIL_REGEX, message: "Email is invalid" },
+          required: "Please Fill in the Field",
+          pattern: { value: EMAIL_REGEX, message: "Invalid Email" },
         }}
       />
       <Button
@@ -51,6 +51,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: "300",
     color: "black",
+    paddingBottom:140,
   },
 });
 
