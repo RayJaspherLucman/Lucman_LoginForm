@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   },
 
   container_PRIMARY: {
-    backgroundColor: "#561C24",
+    backgroundColor: "#C6A969",
     borderRadius: 5,
     marginVertical: 10,
     padding: 10,
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
 
   text_PRIMARY: {
     fontWeight: "bold",
-    color: "#DAE1E7",
+    color: "white",
   },
 
   text_TERTIARY: {

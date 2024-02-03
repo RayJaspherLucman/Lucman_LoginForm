@@ -15,7 +15,7 @@ const Input = ({ placeholder, rules = {}, control, name, secureTextEntry }) => {
         <>
           <View style={styles.container}>
             <TextInput
-              style={[styles.input, { borderColor: error ? "red" : "#00909E" }]}
+              style={[styles.input, { borderColor: error ? "red" : "#561C24" }]}
               placeholder={placeholder}
               value={value}
               onBlur={onBlur}
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     width: "100%",
     backgroundColor: "white",
     borderWidth: 2,
-    borderColor: "#00909E",
+    borderColor: "##561C24",
     borderRadius: 5,
     padding: 5,
     marginVertical: 10,

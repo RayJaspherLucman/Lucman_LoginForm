@@ -18,8 +18,8 @@ const Confirmation = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Your password has been reset sucessfully</Text>
-      <Text style={styles.text}>Now Login with your new password</Text>
+      <Text style={styles.text}>Your password has been reset!</Text>
+      <Text style={styles.text}>Go Back to Login</Text>
       <Button text="Log In" type="PRIMARY" onPress={onBackToLogin} />
     </View>
   );
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     padding: 20,
-    backgroundColor: "#DAE1E7",
+    backgroundColor: "#E8D8C4",
     borderRadius: 5,
   },
   text: {

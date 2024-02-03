@@ -105,18 +105,19 @@ const LogIn = () => {
 
 const styles = StyleSheet.create({
   container: {
+    
     flex: 1,
     width: "100%",
     alignItems: "center",
     justifyContent: "center",
     padding: 20,
-    backgroundColor: "#2A2F4F",
+    backgroundColor: "#E8D8C4",
     borderRadius: 5,
   },
   title: {
     fontSize: 25,
-    fontWeight: "300",
-    color: "white",
+    fontWeight: "400",
+    color: "black",
   },
 
   logo: {

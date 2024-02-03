@@ -22,7 +22,7 @@ const ResetConfirmation = () => {
     <View style={styles.container}>
       <Text style={styles.title}>Reset Your Password</Text>
       <Text style={styles.text}>
-        We have sent a four digit code on your phone/email
+        
       </Text>
       <Input
         name="Four digit code"
@@ -34,7 +34,7 @@ const ResetConfirmation = () => {
           pattern: {
             value: /^[0-9]*$/,
             message:
-              "Please enter a valid 4-digit code containing only numbers",
+              "Please enter a valid 4-digit code",
           },
         }}
       />
@@ -76,13 +76,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     padding: 20,
-    backgroundColor: "#2A2F4F",
+    backgroundColor: "#E8D8C4",
     borderRadius: 5,
   },
   title: {
     fontSize: 25,
     fontWeight: "300",
-    color: "#FDE2F3",
+    color: "black",
   },
   text: {
     marginVertical: 10,
