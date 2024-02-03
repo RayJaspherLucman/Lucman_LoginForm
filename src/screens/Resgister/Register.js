@@ -37,6 +37,9 @@ const LogIn = () => {
         source={Logo}
         resizeMode="contain"
       />
+        <View>
+      <Text style={styles.logoText}>AcornArbor</Text>
+      </View>
 
       <Text style={styles.title}>Create an account</Text>
 
@@ -124,6 +127,18 @@ const styles = StyleSheet.create({
     width: "70%",
     maxWidth: 300,
     height: 100,
+  },
+
+  logo: {
+    width: "70%",
+    maxWidth: 200, // Adjust as needed
+    height: 100,
+  },
+  logoText: {
+    marginLeft: 10, 
+    fontSize: 28, 
+    fontWeight: "bold",
+    color: "black",
   },
 });
 
