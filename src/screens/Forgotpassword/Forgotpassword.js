@@ -18,7 +18,7 @@ const Forgotpassword = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Reset Password?</Text>
+      <Text style={styles.title}>Enter Valid Email to Reset</Text>
       <Input
         name="Enter Email"
         placeholder="Enter Email"
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 25,
     fontWeight: "300",
-    color: "white",
+    color: "black",
   },
 });
 
