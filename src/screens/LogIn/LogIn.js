@@ -1,5 +1,7 @@
-import {View,Text,StyleSheet,Image,useWindowDimensions,} from "react-native";
-import React, { useState } from "react";
+// Import necessary libraries
+import axios from "axios";
+import { View, Text, StyleSheet, Image, useWindowDimensions } from "react-native";
+import React from "react";
 import Input from "../../components/Inputs/Input";
 import Button from "../../components/Buttons/Button";
 import Logo from "../../../images/SquirrelLogo.png";
@@ -7,20 +9,36 @@ import { useNavigation } from "@react-navigation/native";
 import { useForm } from "react-hook-form";
 
 const LogIn = () => {
+  // React Hook Form setup
   const {
     control,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
+  // Dimensions and navigation setup
   const { height } = useWindowDimensions();
   const navigation = useNavigation();
 
-  const onLoginPress = (data) => {
-    console.log(data);
-    navigation.navigate("Home");
+  // Function to handle login
+  const onLoginPress = async (data) => {
+    try {
+      // Make a POST request to your Laravel API endpoint for login
+      const response = await axios.post('http://localhost/api/login', {
+        usernameOrEmail: data.username, // Assuming your Laravel backend accepts either username or email
+        password: data.password,
+      });
+  
+      console.log('Login Successful:', response.data);
+  
+      // Optionally, navigate to the home screen or another screen
+      navigation.navigate("Home");
+    } catch (error) {
+      console.error('Login Error:', error.message);
+    }
   };
-
+  
+  // Other functions for navigation
   const onForgotPasswordPressed = () => {
     navigation.navigate("Forgot Password");
   };
@@ -41,6 +59,7 @@ const LogIn = () => {
       </View>
       <Text style={styles.title}>Log In</Text>
 
+      {/* Your input components */}
       <Input
         name="username"
         placeholder="Username"
@@ -61,18 +80,21 @@ const LogIn = () => {
         }}
       />
 
+      {/* Your login button */}
       <Button
         text="Log In"
         type="PRIMARY"
         onPress={handleSubmit(onLoginPress)}
       />
+
+      {/* Other buttons for navigation */}
       <Button
         text="Forgot Password?"
         type="TERTIARY"
         onPress={onForgotPasswordPressed}
       />
       <Button
-        text="Don't have an account? Resgister here."
+        text="Don't have an account? Register here."
         onPress={onDontHaveAccountPressed}
         type="TERTIARY"
       />
@@ -107,11 +129,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     marginBottom: 20,
-  },
-  logo: {
-    width: "70%",
-    maxWidth: 200, // Adjust as needed
-    height: 100,
   },
   logoText: {
     marginLeft: 10, 
